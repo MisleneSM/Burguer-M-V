@@ -6,7 +6,7 @@ import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-administrator',
   templateUrl: './administrator.component.html',
-  styleUrls: ['./administrator.component.css']
+  styleUrls: ['./administrator.component.css','./administrator.component.ptone.css', './administrator.component.pttwo.css', './administrator.component.ptthree.css', './administrator.component.ptfor.css', './administrator.component.ptfive.css', './administrator.component.ptsix.css', './administrator.component.ptseven.css']
 })
 export class AdministratorComponent implements OnInit {
   employees: any[] = [];
@@ -61,6 +61,7 @@ export class AdministratorComponent implements OnInit {
     this.newEmployee = { name: '', email: '', password: '', role: this.newEmployee.role };
   }
 
+  // deletar funcionário
   deleteEmployee(employeeId: number) {
     if (confirm('Tem certeza que deseja excluir esse funcionário?')) {
       this.userService.deleteEmployee(employeeId).subscribe(
@@ -75,11 +76,13 @@ export class AdministratorComponent implements OnInit {
     }
   }
 
+  // editar funcionário
   showUpdateForm(employee: any) {
     this.isEditing = true;
     this.employeeToUpdate = { ...employee };
   }
 
+  // atualizar funcionário
   updateEmployee() {
     if (this.employeeToUpdate.role === 'Cozinheiro') {
       this.employeeToUpdate.role = 'chefe';
@@ -110,10 +113,11 @@ export class AdministratorComponent implements OnInit {
       this.loadProducts();
       this.isEmployeesTabActive = false;  // Desativa a exibição da seção de funcionários quando a aba "Produtos" estiver ativa
     } else {
-      this.isEmployeesTabActive = true;   // Ativa a exibição da seção de funcionários quando qualquer outra aba estiver ativa
+      this.isEmployeesTabActive = true;   // Ativa a exibição da seção de funcionários quando qualquer outra aba estiver inativa
     }
   }
 
+  // carregar produtos
   loadProducts() {
     this.productService.getProducts().subscribe(
       (productsResponse: any[]) => {
@@ -160,6 +164,7 @@ export class AdministratorComponent implements OnInit {
     this.productToUpdate = { ...product };
   }
 
+// atualizar produtos
   updateProduct() {
     this.productService.updateProduct(this.productToUpdate.id, this.productToUpdate).subscribe(
       (response: any) => {

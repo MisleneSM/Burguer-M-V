@@ -1,0 +1,200 @@
+@media screen and (max-width: 1496px) {
+    .imgLogout {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 1458px) {
+    .buttonsContainer {
+        left: 380px;
+    }
+
+    .titulo,
+    .table {
+        left: 450px;
+    }
+
+    .addOne,
+    .addTwo,
+    .buttonThree,
+    .addThree {
+        left: 480px;
+    }
+
+    .buttonThree {
+        left: 620px;
+    }
+
+    .titleName,
+    .titleRole,
+    .buttonsWorked {
+        left: 500px;
+    }
+
+    .titleRole {
+        left: 650px;
+    }
+
+    .buttonsWorked {
+        left: 780px;
+    }
+
+    .addThree {
+        left: 468px;
+    }
+
+    .btn {
+        left: 160px;
+    }
+
+    .btn1 {
+        left: 190px;
+    }
+
+    .namesProducts {
+        position: relative;
+        left: -30px;
+    }
+
+    .list {
+        left: 420px;
+    }
+
+    .products {
+        left: 440px;
+    }
+
+    .role {
+        left: 700px;
+    }
+
+    .icons {
+        left: 830px;
+    }
+
+    /*.text3{
+        margin-top: 20px;
+        padding-left: 190px;
+    }*/
+    
+    .addProductEdit {
+        left: 450px;;
+    }
+
+    .listProduct {
+        left: 510px;
+    }
+    
+    .btnEdit {
+        left: 250px;
+    }
+    
+    .btnEdit1 {
+        left: 270px;
+    }
+}
+
+@media screen and (max-width: 1187px) {
+    .logoAdm {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        left: 480px;
+        margin-bottom: -70px;
+    }
+
+    .buttonsContainer {
+        position: relative;
+        left: 250px;
+        top: -40px;
+        gap: 290px;
+    }
+
+    .imgLogout {
+        width: 35px;
+        height: 35px;
+        right: 30px;
+    }
+
+    .titulo,
+    .table {
+        left: 350px;
+    }
+
+    .addOne,
+    .addTwo,
+    .buttonThree,
+    .addThree {
+        left: 380px;
+    }
+
+    .buttonThree {
+        left: 530px;
+    }
+
+    .titleName,
+    .titleRole,
+    .buttonsWorked {
+        left: 400px;
+    }
+
+    .titleRole {
+        left: 550px;
+    }
+
+    .buttonsWorked {
+        left: 680px;
+    }
+
+    .addThree {
+        left: 370px;
+    }
+
+    .btn {
+        left: 60px;
+    }
+
+    .btn1 {
+        left: 90px;
+    }
+
+    .namesProducts {
+        position: relative;
+        left: -20px;
+    }
+
+    .list {
+        left: 330px;
+    }
+
+    .products {
+        left: 350px;
+    }
+
+    .role {
+        left: 630px;
+    }
+
+    .icons {
+        left: 740px;
+    }
+}
+
+@media screen and (max-width: 1187px) {
+
+    .addProductEdit {
+        left: 360px;;
+    }
+
+    .listProduct {
+        left: 400px;
+    }
+    
+    .btnEdit {
+        left: 160px;
+    }
+    
+    .btnEdit1 {
+        left: 180px;
+    }
+}

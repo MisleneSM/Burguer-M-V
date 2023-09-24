@@ -16,7 +16,7 @@ export class AuthService {
 
   login(email: string, password: string): Observable<boolean> {
     const loginUser = { email, password };
-
+    // Faz a chamada http da url e faz a verificação do email e senha do usuário.
     return this.http.post<any>(`${this.apiUrl}/login`, loginUser).pipe(
       map(response => {
         if (response.accessToken) {
@@ -34,6 +34,7 @@ export class AuthService {
     );
   }
 
+  // verifica se o usuário esta logado na aplicação
   isUserLoggedIn(): { loggedIn: boolean, token: string | null } {
     const token = localStorage.getItem(this.accessTokenKey);
     return {
@@ -42,21 +43,21 @@ export class AuthService {
     };
   }
 
+  // Busca o role do usuário
   getUserRole(): string | null {
     return localStorage.getItem(this.userRoleKey);
   }
 
-  // Obter o email do usuario logado
+  // Obter o email do usuario logado / é necessário??
   getUserEmail(): string | null {
     return localStorage.getItem('userEmail');
   }
 
-  // Armazenar o token no localStorage após o login
+  // Define o token após o login // perguntar para viih sobre esse 'token'
   storageToken(token: string) {
     localStorage.setItem('token', token);
   }
 
-  // Remover o token após logout
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('userEmail');

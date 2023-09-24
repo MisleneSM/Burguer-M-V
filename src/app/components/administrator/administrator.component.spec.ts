@@ -48,11 +48,11 @@ describe('AdministratorComponent', () => {
     const funcionariosFalsos = [{ id: 1, nome: 'Funcionário 1' }, { id: 2, nome: 'Funcionário 2' }];
     userService.getEmployees.and.returnValue(of(funcionariosFalsos));
 
-    spyOn(component, 'loadEmployees').and.callThrough();
+    spyOn(component, 'loadEmployees').and.callThrough(); // callThrough é utilizado para manter o comportamento original dessa função
 
     component.ngOnInit();
 
-    expect(component.loadEmployees).toHaveBeenCalled();
+    expect(component.loadEmployees).toHaveBeenCalled(); // verifica se a função é chamada
     expect(component.employees).toEqual(funcionariosFalsos);
   });
 
@@ -79,7 +79,7 @@ describe('AdministratorComponent', () => {
     component.loadEmployees();
 
     expect(userService.getEmployees).toHaveBeenCalled();
-    expect(component.employees).toEqual([]); // Verifique se a propriedade employees está vazia após o erro
+    expect(component.employees).toEqual([]); // Verifica se a propriedade employees está vazia após o erro
   });
 
   it('addEmployee - Deve chamar userService.addEmployee com sucesso', () => {
@@ -89,7 +89,7 @@ describe('AdministratorComponent', () => {
 
     component.addEmployee();
 
-    expect(userService.addEmployee).toHaveBeenCalledWith(expectedEmployee);
+    expect(userService.addEmployee).toHaveBeenCalledWith(expectedEmployee); // verifica se a função esta chamando os argumentos especificos da variavel
   });
 
   it('addEmployee - Deve tratar erro ao chamar userService.addEmployee', () => {
@@ -110,20 +110,19 @@ describe('AdministratorComponent', () => {
   });
 
   it('deleteEmployee - Deve excluir um funcionário com confirmação', () => {
-    spyOn(window, 'confirm').and.returnValue(true);
+    spyOn(window, 'confirm').and.returnValue(true); // returnValue configura o que a função espiada deve retornar quando for chamada.
 
-    userService.deleteEmployee.and.returnValue(of({}));
+    userService.deleteEmployee.and.returnValue(of({})); // retorna um valor vazio concluindo a operação de exclusão simulada
 
     component.deleteEmployee(1);
 
     expect(window.confirm).toHaveBeenCalledWith('Tem certeza que deseja excluir esse funcionário?');
-
   });
 
   it('deleteEmployee - Deve tratar erro ao excluir funcionário', () => {
-    spyOn(window, 'confirm').and.returnValue(true); // Simula a confirmação
+    spyOn(window, 'confirm').and.returnValue(true);
     const errorResponse = { message: 'Erro ao excluir funcionário' };
-    userService.deleteEmployee.and.returnValue(throwError(errorResponse)); // Simula um erro
+    userService.deleteEmployee.and.returnValue(throwError(errorResponse));
 
     component.deleteEmployee(1);
 
@@ -139,7 +138,7 @@ describe('AdministratorComponent', () => {
 
     component.showUpdateForm(employee);
 
-    expect(component.isEditing).toBe(true);
+    expect(component.isEditing).toBe(true); // verifica se são identicos
     expect(component.employeeToUpdate).toEqual(employee);
   });
 
@@ -150,7 +149,7 @@ describe('AdministratorComponent', () => {
       role: 'Cozinheiro',
     };
 
-    userService.updateEmployee.and.returnValue(of({}));
+    userService.updateEmployee.and.returnValue(of({})); // simula que a chamada foi bem sucedida
 
     spyOn(component, 'loadEmployees');
     spyOn(component, 'cancelUpdate');
@@ -169,7 +168,7 @@ describe('AdministratorComponent', () => {
     component.employeeToUpdate = { role: 'OutroPapel' };
     const initialRole = component.employeeToUpdate.role;
 
-    spyOn(component, 'updateEmployee').and.stub();
+    spyOn(component, 'updateEmployee').and.stub(); // stub substitui a função e não executa o comportamento real
 
     component.updateEmployee();
 

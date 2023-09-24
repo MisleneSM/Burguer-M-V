@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core'; //Define e configura componentes
+import { Router } from '@angular/router'; // Roteamento - usado para navegar entre diferentes componentes - define rotas
 import { AuthService } from '../services/authentication.service';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs'; // lida com eventos assíncronos
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css', './login.component.ptone.css']
 })
 export class LoginComponent {
   email: string = '';
@@ -21,7 +21,7 @@ export class LoginComponent {
 
     const loginObservable: Observable<boolean> = this.authService.login(this.email, this.password);
      
-    loginObservable.subscribe({
+    loginObservable.subscribe({ // observador 
       next: isUserLoggedIn => {
         if (isUserLoggedIn) {
           const userRole = localStorage.getItem('accessRole');

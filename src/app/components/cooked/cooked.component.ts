@@ -6,7 +6,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-cooked',
   templateUrl: './cooked.component.html',
-  styleUrls: ['./cooked.component.css']
+  styleUrls: ['./cooked.component.css','./cooked.component.ptone.css','./cooked.component.pttwo.css']
 })
 export class CookedComponent implements OnInit {
   orders: any[] = [];
@@ -48,8 +48,8 @@ export class CookedComponent implements OnInit {
     );
   }
 
+  // Marcar o pedido como pronto
   markOrderAsReady(order: any) {
-    // Marcar o pedido como pronto
     order.status = 'ready';
     order.dateProcessed = new Date().toISOString();
 
@@ -57,7 +57,7 @@ export class CookedComponent implements OnInit {
     this.orderService.updateOrder(order).subscribe(
       () => {
         console.log('Pedido marcado como pronto:', order);
-        this.loadOrders(); // Reload orders to update the list
+        this.loadOrders(); // atualiza a lista
       },
       (error) => {
         console.error('Falha ao marcar o pedido como pronto:', error);
@@ -73,10 +73,7 @@ export class CookedComponent implements OnInit {
       const minutes = Math.floor(preparationTime / 1000 / 60);
 
       const formattedEntryDate = this.datePipe.transform(order.dateEntry, 'dd/MM/yyyy HH:mm:ss');
-      //const formattedProcessedDate = this.datePipe.transform(order.dateProcessed, 'dd/MM/yyyy HH:mm:ss');
-
       return `Data: ${formattedEntryDate} - ${minutes} min`;
-      //`Entregue em: ${formattedProcessedDate},`
     } else {
       return '';
     }
@@ -86,7 +83,7 @@ export class CookedComponent implements OnInit {
     this.activeTab = tab;
   }
 
-  filterOrdersByStatus(status: string): any[] { //para filtrar os pedidos com base no status
+  filterOrdersByStatus(status: string): any[] { //filtra pedidos com base no status
     return this.orders.filter(order => order.status === status);
   }
 }

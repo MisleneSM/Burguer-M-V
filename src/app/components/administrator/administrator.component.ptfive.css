@@ -1,0 +1,150 @@
+@media screen and (max-width: 613px) {
+    .logoAdm {
+        left: 150px;
+    }
+
+    .buttonsContainer {
+        left: 125px;
+        width: 250px;
+    }
+
+    .titulo,
+    .table {
+        left: 100px;
+        font-size: 0.9rem;
+        width: 300px;
+    }
+
+    .addOne,
+    .addTwo,
+    .buttonThree,
+    .addThree {
+        left: 100px;
+        font-size: 0.8rem;
+    }
+
+    .inputs {
+        width: 210px;
+    }
+
+    .inputPassword {
+        width: 80px;
+    }
+
+    .buttonSelect {
+        width: 100px;
+        font-size: 0.7rem;
+    }
+
+    .buttonThree {
+        left: 200px;
+    }
+
+    .table {
+        padding-left: 10px;
+        gap: 75px;
+    }
+
+    .text {
+        padding-left: 90px;
+    }
+
+    .titleName,
+    .titleRole,
+    .buttonsWorked {
+        left: 110px;
+        font-size: 0.9rem;
+    }
+
+    .titleRole {
+        left: 230px;
+    }
+
+    .buttonsWorked {
+        display: flex;
+        left: 330px;
+    }
+
+    .buttonsIcons {
+        width: 15px;
+        height: 15px;
+    }
+
+    .addThree {
+        display: flex;
+        flex-direction: column;
+        left: 110px;
+    }
+
+    .addFor,
+    .addFive {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn {
+        top: 200px;
+        left: -80px;
+        padding-left: 20px;
+    }
+
+    .btn1 {
+        top: 200px;
+        left: -60px;
+        padding-left: 20px;
+    }
+
+    .inputsProducts {
+        width: 170px;
+    }
+
+    .list {
+        left: 100px;
+    }
+
+    .text2 {
+        padding-left: 70px;
+    }
+
+    .products {
+        left: 110px;
+        font-size: 0.8rem;
+    }
+
+    .role {
+        left: 300px;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .icons {
+        left: 330px;
+        width: 10px;
+        height: 10px;
+        margin-top: 5px;
+    }
+
+    .addProductEdit {
+        left: 105px;;
+    }
+
+    .inputsProduct {
+        width: 160px;
+    }
+
+    .text3{
+        padding-left: 100px;
+    }
+
+    .listProduct {
+        left: 100px;
+    }
+    
+    .btnEdit {
+        left: -160px;
+    }
+    
+    .btnEdit1 {
+        left: -140px;
+    }
+}

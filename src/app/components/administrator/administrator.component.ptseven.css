@@ -1,0 +1,100 @@
+@media screen and (max-width: 416px) {
+    .logoAdm {
+        left: 90px;
+    }
+
+    .buttonsContainer {
+        top: 50px;
+        left: 70px;
+    }
+
+    .buttonOne,
+    .buttonTwo,
+    .buttonThree {
+        font-size: 0.8rem;
+    }
+
+    .titulo,
+    .table {
+        left: 45px;
+    }
+
+    .addOne,
+    .addTwo,
+    .buttonThree,
+    .addThree {
+        left: 55px;
+    }
+
+    .buttonThree {
+        left: 150px;
+    }
+
+    .titleName,
+    .titleRole,
+    .buttonsWorked {
+        left: 55px;
+    }
+
+    .titleRole {
+        left: 175px;
+    }
+
+    .buttonsWorked {
+        left: 275px;
+    }
+
+    .addThree {
+        left: 80px;
+    }
+
+    .btn {
+        left: -120px;
+    }
+
+    .btn1 {
+        left: -100px;
+    }
+
+    .namesProducts{
+        left: 0px;
+    }
+
+    .list {
+        left: 45px;
+    }
+
+    .products {
+        left: 50px;
+    }
+
+    .role {
+        left: 230px;
+    }
+
+    .icons {
+        left: 280px;
+    }
+
+    .addProductEdit {
+        left: 50px;;
+    }
+
+    .listProduct {
+        left: 70px;
+    }
+
+    .editingInput{
+        margin-top: 05px;
+        width: 140px;
+        height: 20px;
+    }
+    
+    .btnEdit {
+        left: -130px;
+    }
+    
+    .btnEdit1 {
+        left: -110px;
+    }
+}

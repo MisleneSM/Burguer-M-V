@@ -1,0 +1,73 @@
+@media screen and (max-width: 1496px){
+    .imgLogout{
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 1458px){
+    .buttonsContainer{
+        left: 380px;
+    }
+
+    .order-list {
+        gap: 30px;
+        grid-template-columns: 330px 330px 330px;
+    }
+}
+
+@media screen and (max-width: 1187px){
+    .logoCooked {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 480px;
+    }
+
+    .buttonsContainer{
+        position: relative;
+        left: 250px;
+        top: -100px;
+        gap: 290px;
+    }
+
+    .imgLogout{
+        width: 35px;
+        height: 35px;
+        right: 30px;
+    }
+
+    .order-list {
+        position: relative;
+        grid-template-columns: 330px 330px 330px;
+        width: 250px;
+        height: 250px;
+        margin-left: -90px;
+        top: -90px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1099px){
+    .logoCooked {
+        left: 350px;
+    }
+
+    .buttonsContainer{
+        left: 150px;
+        top: -100px;
+        gap: 250px;
+    }
+
+    .imgLogout{
+        width: 30px;
+        height: 30px;
+        right: 30px;
+    }
+    
+    .order-list {
+        margin-left: -20px;
+        gap: 25px;
+        grid-template-columns: 330px 330px;
+    }
+}

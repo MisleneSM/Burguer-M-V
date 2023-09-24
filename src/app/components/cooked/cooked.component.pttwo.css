@@ -1,0 +1,91 @@
+@media screen and (max-width: 878px){
+    .logoCooked {
+        left: 320px;
+    }
+
+    .buttonsContainer{
+        left: 180px;
+        gap: 210px;
+        width: 490px;
+        height: 100px;
+    }
+
+    .order-list {
+        margin-left: 120px;
+        grid-template-columns: 330px;
+    }
+}
+
+@media screen and (max-width: 747px){
+    .logoCooked {
+        width: 200px;
+        height: 200px;
+        left: 250px;
+    }
+    
+    .buttonsContainer{
+        top: 5px;
+        left: 190px;
+        gap: 30px;
+        width: 320px;
+    }
+
+    .order-list {
+        top: -35px;
+        margin-left: 40px;
+        grid-template-columns: 330px;
+    }
+}
+
+
+@media screen and (max-width: 613px){
+    .logoCooked {
+        left: 150px;
+    }
+    
+    .buttonsContainer{
+        left: 125px;
+        width: 250px;
+    }
+
+    .order-list {
+        top: -35px;
+        margin-left: -50px;
+        grid-template-columns: 330px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .logoCooked {
+        left: 120px;
+    }
+    
+    .buttonsContainer{
+        left: 100px;
+        gap: 50px;
+    }
+
+    .order-list {
+        gap: 20px;
+        margin-left: -80px;
+        grid-template-columns: 330px;
+    }
+}
+
+@media screen and (max-width: 416px){
+    .logoCooked {
+        left: 90px;
+    }
+    
+    .buttonsContainer{
+        top: -20px;
+        left: 70px;
+    }
+
+    .order-list {
+        top: -100px;
+        gap: 20px;
+        margin-left: -110px;
+        grid-template-columns: 330px;
+    }
+}

@@ -24,7 +24,7 @@ export class ProductService {
       'Cache-Control': 'no-cache'
     });
 
-    return this.http.get<any[]>(this.apiUrl, { headers });
+    return this.http.get<any[]>(this.apiUrl, { headers }); // garante também que apenas usuários logados tenha acesso aos produtos.
   }
 
   addProduct(newProduct: any): Observable<any> {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError } from 'rxjs';
+import { BehaviorSubject} from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './authentication.service';
 import { Observable, EMPTY } from 'rxjs';
@@ -12,7 +12,7 @@ export class OrderService {
   private apiUrl = 'http://localhost:8080/orders';
   private addedProducts: any[] = [];
   private addedProductSubject = new BehaviorSubject<any[]>(this.addedProducts);
-  addedProduct$ = this.addedProductSubject.asObservable();
+  addedProduct$ = this.addedProductSubject.asObservable(); // converte o subject em Observavel
 
   public getApiUrl(): string {
     return this.apiUrl;
@@ -27,9 +27,10 @@ export class OrderService {
     } else {
       this.addedProducts.push({ product, quantity: 1 });
     }
-    this.addedProductSubject.next(this.addedProducts);
+    this.addedProductSubject.next(this.addedProducts); // notifica os observadores que estejam "ouvindo" addedProduct$
   }
 
+  // remove o produto do resumo do pedido
   removeProduct(productId: number) {
     this.addedProducts = this.addedProducts.filter(p => p.product.id !== productId);
     this.addedProductSubject.next(this.addedProducts);
@@ -39,6 +40,7 @@ export class OrderService {
     return this.addedProducts.length;
   }
   
+  // Encaminhar pedidos para API
   sendOrderToBackend(order: any) {
     const { loggedIn, token } = this.authService.isUserLoggedIn();
 
@@ -67,7 +69,7 @@ export class OrderService {
     });
   }
 
-   
+  // Pegar produtos enviados para API
   getOrders(): Observable<any[]> {
     const user = this.authService.isUserLoggedIn();
     const headers = new HttpHeaders({
@@ -84,10 +86,12 @@ export class OrderService {
     }
   }
   
+  // busca produto que foi armazenado
   getOrderedProduct(productId: number): any {
     return this.addedProducts.find(p => p.product.id === productId);
   }
   
+  // atualiza pedidos da API
   updateOrder(order: any): Observable<any> {
     const updateUrl = `${this.apiUrl}/${order.id}`;
     const headers = new HttpHeaders({
@@ -97,7 +101,7 @@ export class OrderService {
     return this.http.put(updateUrl, order, { headers });
   }
 
-  //função para pegar os pedidos que estão marcados com ready no cooked
+  //função para pegar os pedidos que estão marcados como pronto no cooked
   getReadyOrdersFromBackend(): Observable<any[]> {
     const user = this.authService.isUserLoggedIn();
     if (user.loggedIn) {
@@ -105,10 +109,9 @@ export class OrderService {
         'Authorization': `Bearer ${user.token}`
       });
 
-      //aqui tem uma verificação apara eu filtrar isso 
-      return this.http.get<any[]>(`${this.apiUrl}?status=ready`, { headers });
+      return this.http.get<any[]>(`${this.apiUrl}?status=ready`, { headers }); // retornará apenas pedidos que tenham status ready
     } else {
-      return EMPTY;
+      return EMPTY; // observador vazio 
     }
   }
 }

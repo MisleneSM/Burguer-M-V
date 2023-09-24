@@ -1,0 +1,43 @@
+@media screen and (max-width: 416px) {
+    .imagemLogo {
+        left: 100px;
+    }
+
+    .imgLogout {
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .imgPedidos {
+        top: 8px;
+        right: 30px;
+    }
+
+    .select {
+        left: 70px;
+    }
+
+    .tituloItens {
+        left: 150px;
+    }
+
+    .products {
+        left: 50px;
+    }
+
+    .elementsProducts {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .imgProduto {
+        margin-top: 55px;
+        width: 30px;
+        height: 30px;
+    }
+
+}

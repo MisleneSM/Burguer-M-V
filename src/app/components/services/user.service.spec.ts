@@ -2,7 +2,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { TestBed } from '@angular/core/testing';
 import { UserService } from './user.service';
 import { AuthService } from './authentication.service';
-import { of } from 'rxjs';
 
 describe('UserService', () => {
   let userService: UserService;

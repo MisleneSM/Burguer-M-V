@@ -1,0 +1,110 @@
+.buttonsIcons {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.titleRole {
+    top: 120px;
+    left: 750px;
+}
+
+.buttonsWorked {
+    top: 100px;
+    left: 880px;
+}
+
+.text {
+    margin-top: 20px;
+    padding-left: 150px;
+}
+
+.editWorked {
+    display: flex;
+}
+
+.addThree {
+    top: 120px;
+    left: 580px;
+    padding: 5px;
+}
+
+.btn {
+    display: flex;
+    top: 170px;
+    gap: 10px;
+    left: 280px;
+    padding-left: 18px;
+}
+
+.btn1 {
+    display: flex;
+    top: 170px;
+    gap: 10px;
+    left: 300px;
+    padding-left: 20px;
+}
+
+/* Adicionei aqui*/
+.list {
+    width: 500px;
+    left: 525px;
+}
+
+.text2 {
+    margin-top: 20px;
+    padding-left: 160px;
+}
+
+
+.products {
+    display: flex;
+    left: 550px;
+}
+
+.role {
+    left: 820px;
+}
+
+.icons {
+    left: 930px;
+}
+
+/**/
+.edit {
+    display: flex;
+    left: 550px;
+}
+
+.inputsEdit {
+    display: flex;
+    left: 550px;
+}
+
+.inputsProduct{
+    width: 300px;
+}
+
+/*adicionei isso agora*/
+.text3{
+    margin-top: 20px;
+    padding-left: 190px;
+}
+
+.listProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 630px;
+}
+
+.btnEdit {
+    top: 200px;
+    left: 350px;
+}
+
+.btnEdit1 {
+    top: 200px;
+    left: 370px;
+}

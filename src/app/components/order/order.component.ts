@@ -4,7 +4,7 @@ import { OrderService } from '../services/order.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css']
+  styleUrls: ['./order.component.css', './order.component.ptone.css']
 })
 export class OrderComponent implements OnInit {
   selectedProducts: any[] = [];
@@ -13,6 +13,7 @@ export class OrderComponent implements OnInit {
 
   constructor(private orderService: OrderService) {}
 
+  // atualiza o resumo de pedido caso haja alguma alteração
   ngOnInit(): void {
     this.orderService.addedProduct$.subscribe((products) => {
       this.selectedProducts = products;
@@ -37,13 +38,13 @@ export class OrderComponent implements OnInit {
         quantity: item.quantity
       })),
       status: 'pending', 
-      dateEntry: new Date().toISOString(), 
+      dateEntry: new Date().toISOString(), // transforma a data em string
       dateProcessed: '' 
     };
 
     try {
       this.orderService.sendOrderToBackend(order);
-      this.customerName = '';
+      this.customerName = ''; // limpa o resumo do pedido ao encaminhar para a cozinha
     } catch (error) {
       if (error instanceof Error) {
         console.error('Erro ao enviar pedido:', error.message);

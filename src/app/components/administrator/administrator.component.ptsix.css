@@ -1,0 +1,118 @@
+@media screen and (max-width: 480px) {
+    .logoAdm {
+        left: 120px;
+    }
+
+    .buttonsContainer {
+        left: 100px;
+        gap: 50px;
+    }
+
+    .buttonOne,
+    .buttonTwo,
+    .buttonThree {
+        font-size: 0.8rem;
+    }
+
+    .titulo,
+    .table {
+        left: 75px;
+    }
+
+    .addOne,
+    .addTwo,
+    .buttonThree,
+    .addThree {
+        left: 80px;
+    }
+
+    .inputs {
+        width: 210px;
+    }
+
+    .inputPassword {
+        width: 80px;
+    }
+
+    .buttonSelect {
+        width: 90px;
+        font-size: 0.6rem;
+    }
+
+    .buttonThree {
+        left: 180px;
+    }
+
+    .titleName,
+    .titleRole,
+    .buttonsWorked {
+        left: 85px;
+    }
+
+    .titleRole {
+        left: 205px;
+    }
+
+    .buttonsWorked {
+        display: flex;
+        left: 300px;
+    }
+
+    .addThree {
+        left: 110px;
+    }
+
+    .btn {
+        left: -100px;
+    }
+
+    .btn1 {
+        left: -80px;
+    }
+
+    .namesProducts{
+        left: 5px;
+        font-size: 0.7rem;
+    }
+
+    .inputsProducts {
+        width: 170px;
+    }
+
+    .list {
+        left: 75px;
+    }
+
+    .products {
+        left: 80px;
+    }
+
+    .role {
+        left: 250px;
+    }
+
+    .icons {
+        left: 310px;
+    }
+
+    .addProductEdit {
+        left: 80px;;
+    }
+
+    .listProduct {
+        left: 90px;
+        gap: 5px;
+    }
+
+    .editingInput{
+        width: 130px;
+    }
+    
+    .btnEdit {
+        left: -140px;
+    }
+    
+    .btnEdit1 {
+        left: -120px;
+    }
+}

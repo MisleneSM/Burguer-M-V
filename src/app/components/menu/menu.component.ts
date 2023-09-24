@@ -7,20 +7,20 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css', './menu.component.ptone.css', './menu.component.pttwo.css','./menu.component.ptthree.css', './menu.component.ptfor.css', './menu.component.ptfive.css']
 })
 export class MenuComponent implements OnInit {
   products: any[] = [];
   filteredProducts: any[] = [];
   filteredType: string = 'Café da manha';
-  @Output() addToOrder: EventEmitter<any> = new EventEmitter<any>();
-  @Output() removeFromOrder: EventEmitter<any> = new EventEmitter<any>();
+  @Output() addToOrder: EventEmitter<any> = new EventEmitter<any>(); // adicionar produtos a um pedido
+  @Output() removeFromOrder: EventEmitter<any> = new EventEmitter<any>(); // remover produtos de um pedido
 
   constructor(
     private productService: ProductService,
     private orderService: OrderService,
     private authService: AuthService,
-    private router: Router // Injete o Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,7 +31,6 @@ export class MenuComponent implements OnInit {
   }
 
   goToMesas() {
-    // Redirecionar para o componente Mesas
     this.router.navigate(['/tables']);
   }
 
@@ -44,11 +43,13 @@ export class MenuComponent implements OnInit {
     this.filteredType = type;
   }
 
+  // adiciona o produto ao resumo do pedido
   addProductToOrder(product: any) {
     this.orderService.addProduct(product);
-    this.updateProductQuantity(product, 1);
+    this.updateProductQuantity(product, 1); // adiciona os produtos de 1 em 1
   }
 
+  // remove o produto do resumo do pedido
   removeProductFromOrder(product: any) {
     const existingProduct = this.orderService.getOrderedProduct(product.id);
 
@@ -62,7 +63,8 @@ export class MenuComponent implements OnInit {
       }
     }
   }
-
+  
+  // Atualiza a quantidade de produto
   private updateProductQuantity(product: any, change: number) {
     product.quantity = (product.quantity || 0) + change;
   }

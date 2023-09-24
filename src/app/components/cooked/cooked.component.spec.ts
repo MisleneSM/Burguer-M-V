@@ -183,7 +183,7 @@ describe('CookedComponent', () => {
     const filteredOrders = component.filterOrdersByStatus('ready');
 
     expect(filteredOrders.length).toBe(2);
-    expect(filteredOrders.every(order => order.status === 'ready')).toBeTrue();
+    expect(filteredOrders.every(order => order.status === 'ready')).toBeTrue(); //toBeTrue verifica se o retorno é igual a true.
   });
 
   it('filterOrdersByStatus - Deve retornar um array vazio se nenhum pedido tiver o status fornecido', () => {
