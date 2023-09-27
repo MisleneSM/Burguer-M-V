@@ -32,6 +32,7 @@ export class AdministratorComponent implements OnInit {
     this.authService.logout();
   }
 
+  // carregar lista de funcionarios 
   loadEmployees() {
     this.userService.getEmployees().subscribe(
       (employees: any[]) => {
@@ -44,6 +45,7 @@ export class AdministratorComponent implements OnInit {
     );
   }
 
+  // adicionar funcionarios 
   addEmployee() {
     this.userService.addEmployee(this.newEmployee).subscribe(
       (response: any) => {
@@ -107,6 +109,7 @@ export class AdministratorComponent implements OnInit {
     this.employeeToUpdate = { id: 0, name: '', role: '' };
   }
 
+  // aba de ativar funcionários e produtos 
   setActiveTab(tab: string) {
     this.activeTab = tab;
     if (tab === 'produtos') {
@@ -135,6 +138,7 @@ export class AdministratorComponent implements OnInit {
     );
   }
   
+  // adicionar produtos
   addProduct() {
     const newProduct = {
       name: this.newProduct.name,

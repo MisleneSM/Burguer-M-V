@@ -48,12 +48,12 @@ export class AuthService {
     return localStorage.getItem(this.userRoleKey);
   }
 
-  // Obter o email do usuario logado / é necessário??
+  // Obter o email do usuario logado
   getUserEmail(): string | null {
     return localStorage.getItem('userEmail');
   }
 
-  // Define o token após o login // perguntar para viih sobre esse 'token'
+  // Define o token após o login
   storageToken(token: string) {
     localStorage.setItem('token', token);
   }

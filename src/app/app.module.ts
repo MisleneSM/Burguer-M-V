@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'; // configuração do angular para lidar com execução em um navegador web
 import { FormsModule } from '@angular/forms';//adicionei
 import { HttpClientModule } from '@angular/common/http'; //adicionei
 import { RouterModule } from '@angular/router'; // adicionei

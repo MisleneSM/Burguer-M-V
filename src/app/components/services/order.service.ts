@@ -79,6 +79,7 @@ export class OrderService {
       return this.http.get<any[]>(this.apiUrl, { headers });
   }
 
+  // diminuir a quantidade do produto
   decreaseProductQuantity(productId: number) {
     const existingProduct = this.addedProducts.find(p => p.product.id === productId);
     if (existingProduct) {
@@ -86,12 +87,12 @@ export class OrderService {
     }
   }
   
-  // busca produto que foi armazenado
+  // busca produto especifico que foi armazenado, função chamada em removeProductFromOrder
   getOrderedProduct(productId: number): any {
     return this.addedProducts.find(p => p.product.id === productId);
   }
   
-  // atualiza pedidos da API
+  // atualiza pedidos da API quando for marcados como entregue, função chamada em markOrderAsDelivered  - tables
   updateOrder(order: any): Observable<any> {
     const updateUrl = `${this.apiUrl}/${order.id}`;
     const headers = new HttpHeaders({

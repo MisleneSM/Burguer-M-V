@@ -54,6 +54,7 @@ export class ProductService {
     );
   }
 
+  // atualizar produto
   updateProduct(productId: number, updatedProduct: any): Observable<any> {
     const { loggedIn, token } = this.authService.isUserLoggedIn();
   

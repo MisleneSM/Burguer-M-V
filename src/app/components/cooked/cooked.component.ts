@@ -22,6 +22,7 @@ export class CookedComponent implements OnInit {
     this.authService.logout();
   }
 
+  // carrega os pedidos no servidor
   loadOrders() {
     this.orderService.getOrders().subscribe(
       (orders: any[]) => {

@@ -20,6 +20,7 @@ export class OrderComponent implements OnInit {
     });
   }
 
+  // remove por completo os pedidos
   removeProductFromOrder(product: any) {
     this.orderService.removeProduct(product.id);
     product.quantity = 0;
@@ -29,6 +30,7 @@ export class OrderComponent implements OnInit {
     return this.selectedProducts.reduce((total, product) => total + product.product.price * product.quantity, 0);
   }
 
+  // encaminha pedidos para a API
   sendOrderToAPI() {
     console.log('Sending order:', this.customerName, this.selectedProducts);
     const order = {

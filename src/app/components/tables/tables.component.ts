@@ -58,7 +58,7 @@ export class TablesComponent implements OnInit {
   calculatePreparationTime(order: any): string {
     if (order.status === 'ready' && order.dateEntry && order.dateProcessed) {
       const entryTime = new Date(order.dateEntry).getTime();
-      const processedTime = new Date(order.dateProcessed).getTime();
+      const processedTime = new Date(order.dateProcessed).getTime(); //getTime retorna um valor numerico
       const preparationTime = processedTime - entryTime;
       const minutes = Math.floor(preparationTime / 1000 / 60);
 
