@@ -12,7 +12,6 @@ Desenvolvido por:
 </div>
 
 
-
 # Índice
 
 * [1. Resumo do projeto](#1-resumo-do-projeto)
