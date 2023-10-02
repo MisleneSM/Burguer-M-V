@@ -9,7 +9,7 @@ import { Observable, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class OrderService {
-  private apiUrl = 'http://localhost:8080/orders';
+  private apiUrl = 'https://burger-queen-api-mock-88v3.vercel.app/orders';
   private addedProducts: any[] = [];
   private addedProductSubject = new BehaviorSubject<any[]>(this.addedProducts);
   addedProduct$ = this.addedProductSubject.asObservable(); // converte o subject em Observavel

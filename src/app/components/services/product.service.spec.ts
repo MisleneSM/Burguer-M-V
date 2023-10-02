@@ -42,7 +42,7 @@ describe('ProductService', () => {
             expect(produtos).toEqual(respostaDummy);
         });
 
-        const req = httpTestingController.expectOne('http://localhost:8080/products');
+        const req = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/products');
         expect(req.request.method).toEqual('GET');
         expect(req.request.headers.get('Authorization')).toEqual(`Bearer ${tokenDummy}`);
 
@@ -71,7 +71,7 @@ describe('ProductService', () => {
         productService.addProduct(newProduct).subscribe((response) => { });
 
         // Verifique se a solicitação POST foi feita com os cabeçalhos corretos
-        const req = httpTestingController.expectOne('http://localhost:8080/products');
+        const req = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/products');
         expect(req.request.method).toEqual('POST');
         expect(req.request.headers.get('Authorization')).toEqual(`Bearer ${tokenDummy}`);
         expect(req.request.headers.get('Content-Type')).toEqual('application/json');

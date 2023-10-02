@@ -39,7 +39,7 @@ describe('UserService', () => {
       expect(usuarios[1].funcao).toBe('Garçom');
     });
 
-    const requisicao = httpTestingController.expectOne('http://localhost:8080/users');
+    const requisicao = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/users');
 
     expect(requisicao.request.method).toBe('GET');
     expect(requisicao.request.headers.get('Authorization')).toBe('Bearer token123');
@@ -66,7 +66,7 @@ describe('UserService', () => {
 
     userService.addEmployee(funcionarioParaAdicionar).subscribe(() => {});
 
-    const requisicao = httpTestingController.expectOne('http://localhost:8080/users');
+    const requisicao = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/users');
 
     expect(requisicao.request.method).toBe('POST');
     expect(requisicao.request.headers.get('Authorization')).toBe('Bearer token123');
@@ -108,7 +108,7 @@ describe('UserService', () => {
       expect(response.role).toEqual('chefe');
     });
   
-    const req = httpTestingController.expectOne('http://localhost:8080/users');
+    const req = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/users');
     expect(req.request.method).toEqual('POST');
     expect(req.request.headers.get('Authorization')).toEqual('Bearer tokenDummy');
     expect(req.request.headers.get('Content-Type')).toEqual('application/json');
@@ -131,7 +131,7 @@ describe('UserService', () => {
       expect(response.role).toEqual('service');
     });
   
-    const req = httpTestingController.expectOne('http://localhost:8080/users');
+    const req = httpTestingController.expectOne('https://burger-queen-api-mock-88v3.vercel.app/users');
     expect(req.request.method).toEqual('POST');
     expect(req.request.headers.get('Authorization')).toEqual('Bearer tokenDummy');
     expect(req.request.headers.get('Content-Type')).toEqual('application/json');
@@ -150,7 +150,7 @@ describe('UserService', () => {
 
     userService.deleteEmployee(idDoFuncionarioParaExcluir).subscribe(() => {});
 
-    const urlEsperada = `http://localhost:8080/users/${idDoFuncionarioParaExcluir}`;
+    const urlEsperada = `https://burger-queen-api-mock-88v3.vercel.app/users/${idDoFuncionarioParaExcluir}`;
     
     const requisicao = httpTestingController.expectOne(urlEsperada);
 
@@ -182,7 +182,7 @@ describe('UserService', () => {
 
     userService.updateEmployee(idDoFuncionarioParaAtualizar, dadosAtualizados).subscribe(() => {});
 
-    const urlEsperada = `http://localhost:8080/users/${idDoFuncionarioParaAtualizar}`;
+    const urlEsperada = `https://burger-queen-api-mock-88v3.vercel.app/users/${idDoFuncionarioParaAtualizar}`;
 
     const requisicao = httpTestingController.expectOne(urlEsperada);
 
@@ -225,7 +225,7 @@ describe('UserService', () => {
     });
 
     // Verifica se a solicitação PATCH foi feita com os cabeçalhos corretos e o corpo JSON correto
-    const req = httpTestingController.expectOne(`http://localhost:8080/users/${employeeId}`);
+    const req = httpTestingController.expectOne(`https://burger-queen-api-mock-88v3.vercel.app/users/${employeeId}`);
     expect(req.request.method).toEqual('PATCH');
     expect(req.request.headers.get('Authorization')).toEqual('Bearer tokenDummy');
     expect(req.request.headers.get('Content-Type')).toEqual('application/json');
@@ -243,7 +243,7 @@ describe('UserService', () => {
       expect(response.role).toEqual('service');
     });
   
-    const req = httpTestingController.expectOne(`http://localhost:8080/users/${employeeId}`);
+    const req = httpTestingController.expectOne(`https://burger-queen-api-mock-88v3.vercel.app/users/${employeeId}`);
     expect(req.request.method).toEqual('PATCH');
     expect(req.request.headers.get('Authorization')).toEqual('Bearer tokenDummy');
     expect(req.request.headers.get('Content-Type')).toEqual('application/json');

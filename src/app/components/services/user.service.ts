@@ -11,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:8080/users';
+  private apiUrl = 'https://burger-queen-api-mock-88v3.vercel.app/users';
   constructor(private http: HttpClient, private authService: AuthService) { }
 
   getEmployees(): Observable<any[]> {

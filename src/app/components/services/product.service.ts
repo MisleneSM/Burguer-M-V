@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:8080/products';
+  private apiUrl = 'https://burger-queen-api-mock-88v3.vercel.app/products';
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
