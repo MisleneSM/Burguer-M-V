@@ -4,7 +4,6 @@ import { of, throwError } from 'rxjs';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { AuthService } from './authentication.service';
-import { EMPTY } from 'rxjs';
 
 
 describe('OrderService', () => {
@@ -170,7 +169,7 @@ describe('OrderService', () => {
         });
 
         // Verifica se a função HTTP foi chamada corretamente
-        expect(httpGetSpy).toHaveBeenCalledWith('http://localhost:8080/orders', jasmine.objectContaining({
+        expect(httpGetSpy).toHaveBeenCalledWith('https://burger-queen-api-mock-88v3.vercel.app/orders', jasmine.objectContaining({
             headers: jasmine.any(HttpHeaders),
         }));
 
@@ -215,7 +214,7 @@ describe('OrderService', () => {
         orderService.updateOrder(exampleOrder).subscribe(() => {
             expect(httpPutSpy).toHaveBeenCalled();
 
-            expect(httpPutSpy).toHaveBeenCalledWith('http://localhost:8080/orders/1', jasmine.objectContaining(exampleOrder), jasmine.any(Object));
+            expect(httpPutSpy).toHaveBeenCalledWith('https://burger-queen-api-mock-88v3.vercel.app/orders/1', jasmine.objectContaining(exampleOrder), jasmine.any(Object));
         });
     });
 
