@@ -1,7 +1,7 @@
 <div align="center">
 
 # Burguer MV
-Desenvolvido por:
+Desenvolvido por: <br>
   Mislene Moura<br>
   <a href="https://www.linkedin.com/in/mislenemoura/">Linkedin</a> | <a href="https://github.com/MisleneSM">Github</a>
   <br>
