@@ -74,10 +74,10 @@ Desenvolvemos testes unitários abrangendo as funcionalidades e garantindo mais 
   <br>
   <img align="center" alt="Rafa-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="Rafa-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Angular" height="35" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png"> 
+  <img align="center" alt="TS" height="35" src="https://www.typescripttutorial.net/wp-content/uploads/2020/04/favicon.png">
   <img align="center" alt="vscode" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
   <img align="center" alt="Figma" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
-  <img align="center" alt="TS" height="35" src="https://www.typescripttutorial.net/wp-content/uploads/2020/04/favicon.png">
-  <img align="center" alt="Angular" height="35" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png"> 
 <img align="center" alt="Figma" height="35" src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-256.png"/>
 <img align="center" alt="git" height="35" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-256.png"/> 
 <img align="center" alt="github" height="35" src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/github-256.png"/>
