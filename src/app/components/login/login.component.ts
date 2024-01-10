@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'; // lida com eventos assíncronos
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css', './login.component.ptone.css']
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   email: string = '';

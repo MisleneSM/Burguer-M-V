@@ -13,15 +13,17 @@
     <button class="buttons" (click)="filterProducts('Almoço')">Almoço e Jantar</button>
   </section>
   <p class="tituloItens">Itens/Valor</p>
-  <div *ngFor="let product of filteredProducts">
-    <div class="products">
-      <img class="imgProduto" [src]="product.image" alt="{{ product.name }}" />
-      <div class="elementsProducts">
-        <h3 class="tituloProducts">{{ product.name }} - R$ {{ product.price }}</h3>
-        <div class="quantity-controls">
-          <button class="quantity-button minus" (click)="removeProductFromOrder(product)">-</button>
-          <input class="quantity-input" type="number" [value]="product.quantity || 0" min="0" />
-          <button class="quantity-button plus" (click)="addProductToOrder(product)">+</button>
+  <div class="productsFilter">
+    <div *ngFor="let product of filteredProducts">
+      <div class="products">
+        <img class="imgProduto" [src]="product.image" alt="{{ product.name }}" />
+        <div class="elementsProducts">
+          <h3 class="tituloProducts">{{ product.name }} - R$ {{ product.price }}</h3>
+          <div class="quantity-controls">
+            <button class="quantity-button minus" (click)="removeProductFromOrder(product)">-</button>
+            <input class="quantity-input" type="number" [value]="product.quantity || 0" min="0" />
+            <button class="quantity-button plus" (click)="addProductToOrder(product)">+</button>
+          </div>
         </div>
       </div>
     </div>

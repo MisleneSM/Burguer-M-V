@@ -3,11 +3,9 @@
     overflow-x: hidden;
 }
 
-.containerBackground {
-    display: flex;
+.background {
     position: absolute;
-    right: 0px;
-    height: 100%;
+    right: 0;
 }
 
 .backgroundx {
@@ -16,8 +14,7 @@
 
 .imagemLogo {
     display: flex;
-    position: relative;
-    left: 0px;
+    position: fixed;
     width: 100px;
     height: 100px;
 }
@@ -48,9 +45,9 @@
 
 .select {
     display: flex;
-    position: relative;
+    position: fixed;
     gap: 200px;
-    top: -60px;
+    top: 30px;
     left: 500px;
 }
 
@@ -75,9 +72,9 @@
 
 .tituloItens {
     display: flex;
-    position: relative;
+    position: fixed;
     left: 30px;
-    top: 5px;
+    top: 130px;
     flex-direction: column;
     background-color: var(--CorPrimaria);
     width: 120px;
@@ -88,12 +85,23 @@
     border-radius: 5px;
     font-size: 1em;
     font-family: 'Prompt', sans-serif;
+    margin-bottom: 180px;
+}
+
+.productsFilter{
+    height: 70vh;
+    position: relative;
+    width: 750px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    outline: 0;
+    top: 170px;
+    bottom: 0;
 }
 
 .products {
     display: flex;
     position: relative;
-    top: 20px;
     left: 30px;
 }
 

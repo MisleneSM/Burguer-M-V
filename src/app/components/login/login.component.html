@@ -1,12 +1,9 @@
-<main class="main-login">
+<main class="main">
+  <img src="../../../assets/vector-2.svg" alt="Logo" class="backgroundx">
   <section class="background">
     <img src="../../../assets/vector.svg" alt="Logo" class="backgroundy">
-    <img src="../../../assets/vector-2.svg" alt="Logo" class="backgroundx">
-    <div class="container">
-      <img src="../../../assets/Logo-burguermv.png" alt="Imagem Logo" class="imgLogo">
-    </div>
+    <img src="../../../assets/Logo-burguermv.png" alt="Imagem Logo" class="imgLogo">
     <form class="form" (ngSubmit)="login()">
-      <section class="inputs-login">
         <h1 class="titulo">Para acessar o aplicativo preencha os campos com a credencial! </h1>
         <div class="inputs-acess">
           <input class="inputs" type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
@@ -14,7 +11,6 @@
         </div>
         <div *ngIf="errorLogin" class="error-message">{{errorMessage}}</div>
         <button type="submit" class="buttonLogin">Acessar</button>
-      </section>
     </form>
   </section>
 </main>
