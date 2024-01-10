@@ -78,9 +78,9 @@ Desenvolvemos testes unitários abrangendo as funcionalidades e garantindo mais 
   <img align="center" alt="TS" height="35" src="https://www.typescripttutorial.net/wp-content/uploads/2020/04/favicon.png">
   <img align="center" alt="vscode" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
   <img align="center" alt="Figma" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
-<img align="center" alt="git" height="35" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-256.png"/> 
-<img align="center" alt="github" height="35" src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/github-256.png"/>
-<br>
+  <img align="center" alt="git" height="35" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-256.png"/> 
+  <img align="center" alt="github" height="35" src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/github-256.png"/>
+  <br>
 </div>
 
 

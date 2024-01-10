@@ -51,8 +51,8 @@
 }
 
 .buttonRemove{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -85,7 +85,7 @@
     transition: 0.2s;
 }
 
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 1274px) {
     .order-summary {
         width: 390px;
         height: 450px;

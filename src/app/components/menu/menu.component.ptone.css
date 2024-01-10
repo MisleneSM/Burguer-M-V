@@ -1,17 +1,18 @@
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 1274px) {
     .background {
         display: none;
     }
 
     .backgroundx {
         display: flex;
-        position: relative;
+        position: absolute;
         width: 100%;
     }
 
     .imagemLogo {
-        left: 500px;
-        top: -150px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
         width: 250px;
         height: 250px;
     }

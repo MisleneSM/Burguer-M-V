@@ -1,7 +1,5 @@
-.backgroundy {
+.background {
     display: flex;
-    position: absolute;
-    height: 100%;
 }
 
 .backgroundx {
@@ -10,39 +8,19 @@
 
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
 .imgLogo {
-    position: absolute;
-    width: 750px;
-    height: 750px;
-    top: 0px;
-    right: 520px;
+    width: 700px;
+    height: 700px;
 }
 
 .form {
-    top: 190px;
-    right: 100px;
-    position: absolute;
-}
-
-.titulo {
-    color: var(--CorPrimaria);
-    text-align: center;
-    font-size: 1.4rem;
-    font-family: 'Nunito', sans-serif;
-    margin-bottom: 25px;
-}
-
-.inputs-login {
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 380px;
-    right: 0px;
-    gap: 10px;
     backdrop-filter: blur(2px);
     box-shadow: 0px 0px 12px 0px rgba(28, 28, 28, 0.15);
     border-radius: 15px;
@@ -50,6 +28,16 @@
     -moz-box-shadow: 0px 0px 12px 0px rgba(28, 28, 28, 0.15);
     padding: 45px;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(28, 28, 28, 0.15);
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+.titulo {
+    color: var(--CorPrimaria);
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 28px;
 }
 
 .inputs-acess {
@@ -57,11 +45,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 10px;
 }
 
 .inputs {
     background: var(--CorTerciaria);
-    border: 0;
+    border: 0px;
     border-bottom: 1px solid #bababa;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
@@ -94,23 +83,144 @@
 }
 
 .error-message {
-    display: flex;
     align-items: center;
-    text-align: center;
-    color: #000000;
+    color: var(--CorPrimaria);
     margin-left: 55px;
     font-size: 0.9rem;
     font-family: 'Prompt', sans-serif;
 }
 
-@media screen and (max-width: 1350px) {
-    .imgLogo {
-        left: 140px;
+@media screen and (max-width: 1535px) {
+    .imgLogo, .form {
+        position: relative;
+        right: 90px;
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1397px){
+    .backgroundy {
+        display: none;
+    }
+
+    .backgroundx {
+        display: flex;
+        width: 100%;
+    }
+
+    .background {
+        position: relative;
+        bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 50px;
+    }
+
     .imgLogo {
-        left: 60px;
+        position: relative;
+        display: flex;
+        width: 510px;
+        height: 550px;
+    }
+    
+    .form {
+       position: relative;
+       justify-content: center;
+       bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 1056px){
+    .main {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .background {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 150px;
+    }
+
+    .imgLogo {
+        width: 400px;
+        height: 400px;
+    }
+
+    .form {
+        top: 0;
+        bottom: 0;
+        margin-top:0px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .background {
+        margin-left: 170px;
+        top: 0px;
+    }
+
+    .imgLogo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .form {
+        width: 340px;
+        height: 320px;
+    }
+    
+    .titulo {
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .inputs-acess {
+        width: 250px;
+    }
+    
+    .inputs {
+        font-size: 0.7rem;
+    }
+    
+    .buttonLogin {
+        margin-left: 55px;
+        width: 130px;
+        font-size: 0.9em;
+    }
+
+    .error-message {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .imgLogo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .form {
+        width: 280px;
+    }
+
+    .titulo {
+        margin-top: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .inputs-acess {
+        width: 190px;
+    }
+      
+    .buttonLogin {
+        width: 90px;
+        height: 30px;
+        font-size: 0.7em;
+    }
+
+    .error-message {
+        margin-left: 30px;
+        font-size: 0.7rem;
     }
 }
