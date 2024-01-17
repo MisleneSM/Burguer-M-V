@@ -13,7 +13,6 @@
 }
 
 .imagemLogo {
-    display: flex;
     position: fixed;
     width: 100px;
     height: 100px;
@@ -25,7 +24,7 @@
     gap: 30px;
 }
 
-.imgLogout {
+.imgLogout , .imgPedidos {
     position: absolute;
     top: 15px;
     right: 25px;
@@ -35,12 +34,10 @@
 }
 
 .imgPedidos {
-    position: absolute;
     top: 80px;
     right: 18px;
     width: 40px;
     height: 40px;
-    cursor: pointer;
 }
 
 .select {
@@ -72,31 +69,27 @@
 
 .tituloItens {
     display: flex;
+    justify-content: center;
     position: fixed;
     left: 30px;
     top: 130px;
-    flex-direction: column;
     background-color: var(--CorPrimaria);
     width: 120px;
     height: 30px;
     color: var(--CorTerciaria);
-    text-align: center;
     padding: 3px;
     border-radius: 5px;
     font-size: 1em;
     font-family: 'Prompt', sans-serif;
-    margin-bottom: 180px;
 }
 
 .productsFilter{
     height: 70vh;
     position: relative;
-    width: 750px;
+    width: 590px;
     overflow-y: scroll;
     overflow-x: hidden;
-    outline: 0;
     top: 170px;
-    bottom: 0;
 }
 
 .products {
@@ -116,6 +109,7 @@
 }
 
 .tituloProducts {
+    color: var(--CorPrimaria);
     padding: 60px 0px 20px 20px;
 }
 
@@ -141,4 +135,117 @@
     border-radius: 5px;
     margin: 0 5px;
     padding: auto;
+}
+@media screen and (max-width: 1304px) {
+    .background {
+        display: none;
+    }
+
+    .backgroundx {
+        display: flex;
+        position: absolute;
+        width: 100%;
+    }
+
+    .imagemLogo {
+        left: 500px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .imgLogout, .imgPedidos {
+        background-color: brown;
+        border-radius: 5px;
+        top: 50px;
+        right: 20px;
+        width: 30px;
+        height: 28px;
+    }
+
+    .imgPedidos {
+        right: 70px;
+    }
+
+    .imgLogout:hover, .imgPedidos:hover {
+        background-color: var(--CorSecundaria);
+    }
+
+    .select {
+        gap: 50px;
+        top: 160px;
+        left: 80px;
+    }
+
+    .buttons {
+        font-size: 0.9em;
+    }
+
+    .tituloItens {
+        top: 250px;
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .productsFilter{
+        height: 50vh;
+        width: 570px;
+        top: 320px;
+    }
+
+    .products {
+        left: 40px;
+        top: 0px;
+    }
+
+    .imgProduto {
+        width: 60px;
+    }
+
+    .tituloProducts {
+        margin-top: 25px;
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .quantity-controls {
+        margin-top: 44px;
+    }
+
+    .quantity-button {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .quantity-input {
+        width: 45px;
+    }
+}
+@media screen and (max-width: 1019px) {
+    .imagemLogo {
+        left: 400px;
+    }
+
+    .select {
+        gap: 30px;
+        left: 30px;
+    }
+
+    .productsFilter{
+        width: 500px;
+        top: 320px;
+    }
+    
+    .products {
+        left: 30px;
+    }
+    
+    .imgProduto {
+        width: 50px;
+        height: 40px;
+    }
+    
+    .tituloProducts {
+        font-size: 1rem;
+    }
 }

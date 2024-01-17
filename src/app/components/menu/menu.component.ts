@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css', './menu.component.ptone.css', './menu.component.pttwo.css','./menu.component.ptthree.css', './menu.component.ptfor.css', './menu.component.ptfive.css']
+  styleUrls: ['./menu.component.css', './menu.componentOne.css']
 })
 export class MenuComponent implements OnInit {
   products: any[] = [];
