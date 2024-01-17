@@ -43,7 +43,7 @@
 .containerTwo{
     margin-top: 15px;
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .tituloContainer {
@@ -58,9 +58,10 @@
 
 .totalPedido {
     margin-top: 10px;
+    font-weight: bold;
     font-size: 1.2rem;
     position: relative;
-    bottom: -10px;
+    top: 10px;
 }
 
 .buttonPedido {
@@ -85,16 +86,15 @@
     transition: 0.2s;
 }
 
-@media screen and (max-width: 1274px) {
+@media screen and (max-width: 1304px) {
     .order-summary {
         width: 390px;
         height: 450px;
-        top: 160px;
+        top: 240px;
         right: 50px;
     }
 
     .resumoProduto {
-        margin-top: -20px;
         font-size: 1.5rem;
     }
 
@@ -103,7 +103,7 @@
     }
 
     .containerTwo{
-        gap: 25px;
+        gap: 10px;
     }
 
     .tituloContainer {
@@ -122,5 +122,107 @@
     .buttonPedido {
         width: 130px;
         font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .order-summary {
+        top: 280px;
+        right: 40px;
+        width: 350px;
+        height: 400px;
+    }
+
+    .resumoProduto {
+        font-size: 1.4rem;
+    }
+
+    .tituloContainer {
+        font-size: 0.9rem;
+    }
+
+    .totalPedido {
+        margin-top: 0px;
+        top: 0px;
+    }
+
+    .buttonPedido {
+        margin-top: 0px;
+        width: 110px;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 897px) {  
+    .order-summary {
+        position: relative;
+        left: 260px;
+        height: 350px;
+        top: 100px;
+        margin-bottom: 140px;
+    }
+
+    .inputName {
+        width: 65%;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .order-summary {
+        left: 180px;
+        top: 110px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .order-summary {
+        left: 100px;
+        top: 110px;
+        width: 300px;
+        height: 320px;
+    }
+
+    .resumoProduto {
+        font-size: 1rem;
+    }
+
+    .inputName {
+        width: 50%;
+        height: 90px;
+        font-size: 0.6rem;
+    }
+
+    .containerTwo{
+        gap: 10px;
+    }
+
+    .tituloContainer {
+        font-size: 0.7rem;
+    }
+
+    .totalPedido {
+        font-size: 0.7rem;
+    }
+
+    .buttonPedido {
+        width: 100px;
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 465px){
+    .order-summary {
+        left: 35px;
+        width: 250px;
+    }
+
+    .inputName {
+        width: 60%;
+    }
+
+    .buttonRemove{
+        width: 10px;
+        height: 10px;
     }
 }

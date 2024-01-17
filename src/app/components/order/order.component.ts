@@ -4,7 +4,7 @@ import { OrderService } from '../services/order.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css', './order.component.ptone.css']
+  styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
   selectedProducts: any[] = [];
