@@ -10,10 +10,10 @@
   <section class="order-list">
     <div class="order-item" *ngFor="let order of (activeTab === 'ready' ? readyOrders : deliveredOrders)">
       <div class="order-details">
-        <p class="order client">{{ order.client }} - {{ order.products.length }} Itens</p>
+        <p class="order client">{{ order.client }} - {{ order.products.length }} {{order.products.length > 1 ? 'Itens' : 'Item'}}</p>
         <div class="product-details">
           <ul class="order-product" *ngFor="let product of order.products">
-            {{ product.name }} - {{ product.quantity }} unidades
+            {{ product.name }} - {{ product.quantity }} {{product.quantity > 1 ? 'unidades' : 'unidade'}}
           </ul>
         </div>
       </div>

@@ -32,12 +32,11 @@ export class OrderComponent implements OnInit {
 
   // encaminha pedidos para a API
   sendOrderToAPI() {
-    console.log('Sending order:', this.customerName, this.selectedProducts);
     const order = {
       client: this.customerName,
       products: this.selectedProducts.map(item => ({
         ...item.product, 
-        quantity: item.quantity
+      quantity: item.quantity
       })),
       status: 'pending', 
       dateEntry: new Date().toISOString(), // transforma a data em string
