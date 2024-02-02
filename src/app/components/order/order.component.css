@@ -213,7 +213,7 @@
 
 @media screen and (max-width: 465px){
     .order-summary {
-        left: 35px;
+        left: 60px;
         width: 250px;
     }
 
@@ -224,5 +224,11 @@
     .buttonRemove{
         width: 10px;
         height: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .order-summary {
+        left: 30px;
     }
 }

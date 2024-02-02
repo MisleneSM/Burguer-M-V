@@ -1,31 +1,32 @@
 .container {
     height: 100vh;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .logoTables {
-    display: flex;
-    position: absolute;
-    width: 150px;
-    height: 150px;
+    position: fixed;
+    width: 100px;
+    height: 100px;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .buttonsContainer {
+    position: fixed;
     display: flex;
-    position: relative;
-    left: 400px;
-    top: 50px;
+    left: 300px;
+    top: 30px;
     gap: 200px;
+    z-index: 1;
 }
 
 .buttonsContainerTwo {
-    display: flex;
-    position: relative;
-    left: 1170px;
-    top: 11px;
+    position: fixed;
+    left: 1090px;
+    top: 30px;
     gap: 200px;
+    z-index: 1;
 }
 
 .buttonOne,
@@ -47,23 +48,26 @@
 .buttonThree:hover,
 .buttonOk:hover {
     background-color: var(--CorSecundaria);
+    transition: 0.2s;
 }
 
 .order-list {
     display: grid;
     width: 100%;
-    height: 100%;
-    margin-bottom: 100px;
+    height: 80vh;
     grid-template-columns: 330px 330px 330px 330px;
+    margin-top: 130px;
+    margin-left: 100px;
+    gap: 10px;
+    margin-bottom: 90px;
+    overflow-y: scroll;
 }
 
 .order-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    top: 100px;
+    align-items: center;
     width: 300px;
     height: 300px;
     backdrop-filter: blur(2px);
@@ -74,8 +78,9 @@
     padding: 45px;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(30, 28, 28, 0.15);
     color: var(--CorPrimaria);
-    left: 150px;
-    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 .order-details {
@@ -137,4 +142,5 @@
     width: 150px;
     height: 50px;
     padding: 10px;
+    margin-top: 25px;
 }

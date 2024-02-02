@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css', './tables.component.ptone.css', './tables.component.pttwo.css']
+  styleUrls: ['./tables.component.css', './tables.component.ptone.css']
 })
 export class TablesComponent implements OnInit {
   readyOrders: any[] = [];

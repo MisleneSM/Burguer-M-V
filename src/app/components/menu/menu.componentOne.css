@@ -161,7 +161,7 @@
 
 @media screen and (max-width: 465px){
     .imagemLogo {
-        left: 50px;
+        left: 80px;
     }
 
     .icones {
@@ -169,11 +169,11 @@
      }
 
     .select {
-        left: 30px;
+        left: 60px;
     }
 
     .tituloItens {
-        left: 90px;
+        left: 120px;
     }
 
     .productsFilter{
@@ -202,5 +202,19 @@
         width: 15px;
         height: 15px;
         font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width:380px){
+    .imagemLogo {
+        left: 60px;
+    }
+
+    .select {
+        left: 40px;
+    }
+
+    .tituloItens {
+        left: 110px;
     }
 }
