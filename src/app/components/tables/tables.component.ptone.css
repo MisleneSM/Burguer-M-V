@@ -138,9 +138,9 @@
     }
     
     .product-details {
-        height: 60px;
-        width: 250px;
-        margin-left: 50px;
+        height: 70px;
+        width: 200px;
+        margin-left: 10px;
         font-size: 0.7rem;
     }
     
@@ -185,20 +185,20 @@
 
 @media screen and (max-width: 464px){
     .logoTables {
-        left: 80px;
+        left: 100px;
     }
 
     .buttonsContainer {
-        left: 60px;
+        left: 80px;
         gap: 10px;
         width: 200px;
     }
 
     .buttonsContainerTwo {
-        left: 110px;
+        left: 130px;
     }
 
     .order-list {
-        margin-left: 35px;
+        margin-left: 60px;
     }
 }
